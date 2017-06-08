@@ -32,7 +32,7 @@ def nerTagger(tokens):
         print(word, tag)
 
 
-# 中文句法分析
+# 中英文词性标注
 def postTagger(tokens):
     chi_tagger = nltk.StanfordPOSTagger(
         model_filename=r'E:\03_tools\machine learning\stanfordnlp\3.7\stanford-chinese-corenlp-2016-10-31-models\edu\stanford\nlp\models\pos-tagger\chinese-distsim\chinese-distsim.tagger',
@@ -41,6 +41,7 @@ def postTagger(tokens):
     print(chi_tagger.tag(tokens))
 
 
+# 中英文句法分析
 def parser(tokens):
     from nltk.parse.stanford import StanfordParser
 
@@ -68,13 +69,13 @@ def dependencyParser(tokens):
 
 
 if __name__ == '__main__':
-    sent = u'北海已成为中国对外开放中升起的一颗明星'
+    sent = u'包邮德国米莱MILEL浓缩乳清蛋白粉wpc80健身健肌增肌粉保真'
     tokens = segment(sent)
 
     # nerTagger(tokens)
+
+    postTagger(tokens)
+
+    # parser(tokens)
     #
-    # postTagger(tokens)
-
-    parser(tokens)
-
     dependencyParser(tokens)
