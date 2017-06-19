@@ -69,7 +69,7 @@ def dependencyParser(tokens):
 
 
 if __name__ == '__main__':
-    sent = u'包邮德国米莱MILEL浓缩乳清蛋白粉wpc80健身健肌增肌粉保真'
+    sent = u'MBSP is a text analysis system based on the TiMBL and MBT memory based learning applications developed at CLiPS and ILK. It provides tools for Tokenization and Sentence Splitting, Part of Speech Tagging, Chunking, Lemmatization, Relation Finding and Prepositional Phrase Attachment'
     tokens = segment(sent)
 
     # nerTagger(tokens)
